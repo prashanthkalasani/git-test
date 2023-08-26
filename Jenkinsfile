@@ -34,7 +34,7 @@ pipeline {
                         agent {
                                 nginx {
                                         reuseNode false
-					image 'ubuntu'
+					image 'ec2-instance'
                                         }
 			}
 				steps {
