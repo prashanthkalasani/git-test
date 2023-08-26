@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent label
     stages {
         stage('One') {
                 steps {
@@ -33,7 +33,7 @@ pipeline {
                         stage('Integration test') {
                         agent {
                                 docker {
-                                        reuseNode false
+                                        reuseNode true
 					image 'nginx'
                                         }
 			}
