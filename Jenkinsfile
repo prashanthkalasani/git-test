@@ -31,12 +31,7 @@ pipeline {
                                 }
                         }
                         stage('Integration test') {
-                        agent {
-                                nginx {
-                                        reuseNode false
-					image 'ec2-instance'
-                                        }
-			}
+                        
 				steps {
 					echo 'Running the integration test..'
 				}
